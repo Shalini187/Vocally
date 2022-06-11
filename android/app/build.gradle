@@ -273,8 +273,8 @@ android {
             // see https://facebook.github.io/react-native/docs/signed-apk-android.
             debuggable false
             signingConfig signingConfigs.release
-            minifyEnabled enableProguardInReleaseBuilds
             shrinkResources enableProguardInReleaseBuilds
+            minifyEnabled enableProguardInReleaseBuilds
             resValue "string", "CodePushDeploymentKey", '"HwNPyVTkymXwDZTsN8Sk5WnyCkxPpskilGEMC'
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
