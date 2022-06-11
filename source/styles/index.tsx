@@ -2,7 +2,8 @@ import { Dimensions, StyleSheet } from "react-native";
 
 export const searchStyle = StyleSheet.create({
     centeredView: {
-        top: '5%',
+        flex:1,
+        top: '4%',
         margin: 16,
         width: '90%',
         borderRadius: 30,
@@ -49,7 +50,7 @@ export const flexStyle = StyleSheet.create({
         alignItems: 'center'
     },
     star: {
-        top: '20%',
+        top: '16%',
         position: 'absolute',
         margin: 16,
         alignSelf: 'flex-end',
@@ -57,7 +58,7 @@ export const flexStyle = StyleSheet.create({
         borderRadius: 50
     },
     navigation: {
-        top: '28%',
+        top: '26%',
         position: 'absolute',
         margin: 16,
         alignSelf: 'flex-end',

@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { View, TextInput } from "react-native";
+import { View, TextInput, KeyboardAvoidingView, Platform } from "react-native";
 import { IconToggle } from 'react-native-material-ui';
 import { Context } from "../../../App";
 
@@ -8,7 +8,7 @@ import { themeGetter } from "../../utils";
 
 function SystemSearch(props: any) {
     const { theme = 'dark', state, setBorderColor, setValue, value }: any = useContext(Context);
-    
+
     let { centeredView, input, buttons, buttonSearch, buttonClose } = searchStyle || {};
 
     useEffect(() => {
@@ -19,12 +19,13 @@ function SystemSearch(props: any) {
     let { color, borderColor } = state || {};
 
     return (
-        <View style={{ ...centeredView, backgroundColor: color }}>
+        <KeyboardAvoidingView behavior={'padding'}
+            enabled style={{ ...centeredView, backgroundColor: color }}>
             <TextInput
                 value={value}
                 style={{ ...input, borderColor: color, color: borderColor }}
                 keyboardType={'web-search'}
-                returnKeyLabel = {'Go'}
+                returnKeyLabel={'Go'}
                 placeholderTextColor={'#c3c3c3'}
                 placeholder={'Search here...'}
                 onChangeText={(text: string) => setValue(text)}
@@ -41,7 +42,7 @@ function SystemSearch(props: any) {
                         : <></>
                 }
             </View>
-        </View>
+        </KeyboardAvoidingView>
     );
 };
 
