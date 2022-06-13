@@ -36,7 +36,7 @@ static void InitializeFlipper(UIApplication *application) {
   InitializeFlipper(application);
 #endif
 
-  [GMSServices provideAPIKey:@"AIzaSyD0I7FRuDgLSo7k9VL3Bh2M0uS8tsLLr-o"];
+  [GMSServices provideAPIKey:@"IOS_MAP_KEY"];
   [AppCenterReactNative register];
   [AppCenterReactNativeAnalytics registerWithInitiallyEnabled:true];
   [AppCenterReactNativeCrashes registerWithAutomaticProcessing];
